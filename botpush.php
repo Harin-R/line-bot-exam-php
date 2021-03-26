@@ -8,13 +8,15 @@ $access_token = '836kFrmVWL5WLpYr7FRYi7UkYTAtb2KakMiZSgte+vuMEMUU81al9vk628t4ujI
 
 $channelSecret = '697d12a044303205c31aa1f7ffe7626f';
 
-$pushID = 'Ucfd55683f305fa476b0f5538702b8781';
+$pushID_Peem = 'Ucfd55683f305fa476b0f5538702b8781';
+$pushID_A = 'Ufdb43785e72aad22bda0d02d79216f6a';
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('Welcome to Basic Clinical Line official account.');
-$response = $bot->pushMessage($pushID, $textMessageBuilder);
+$response_Peem = $bot->pushMessage($pushID_Peem, $textMessageBuilder);
+$response_A = $bot->pushMessage($pushID_A, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
