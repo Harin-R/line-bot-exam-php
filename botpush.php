@@ -10,6 +10,8 @@ $channelSecret = '697d12a044303205c31aa1f7ffe7626f';
 
 $pushID_Peem = 'Ucfd55683f305fa476b0f5538702b8781';
 $pushID_A = 'Ufdb43785e72aad22bda0d02d79216f6a';
+$pushID_Mew = 'U9883e9e8a2bf32489428a85bf8914800';
+$pushID_Mint = 'Ue70a03dd0f86045b5549e2c98ae4472f';
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
@@ -18,8 +20,10 @@ $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('Welco
 $response_Peem = $bot->pushMessage($pushID_Peem, $textMessageBuilder);
 $response_A = $bot->pushMessage($pushID_A, $textMessageBuilder);
 
-echo $response_Peem->getHTTPStatus() . ' ' . $response_Peem->getRawBody();
-echo $response_A->getHTTPStatus() . ' ' . $response_A->getRawBody();
+echo $response_Peem->getHTTPStatus() . ' ' . $response_Peem->getRawBody();</br>
+echo $response_A->getHTTPStatus() . ' ' . $response_A->getRawBody();</br>
+echo $response_Peem->getHTTPStatus() . ' ' . $response_Peem->getRawBody();</br>
+echo $response_A->getHTTPStatus() . ' ' . $response_A->getRawBody();</br>
 
 
 
