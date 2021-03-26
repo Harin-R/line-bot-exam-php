@@ -19,11 +19,13 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('Welcome to Basic Clinical Line official account.');
 $response_Peem = $bot->pushMessage($pushID_Peem, $textMessageBuilder);
 $response_A = $bot->pushMessage($pushID_A, $textMessageBuilder);
+$response_Mew = $bot->pushMessage($pushID_Mew, $textMessageBuilder);
+$response_Mint = $bot->pushMessage($pushID_Mint, $textMessageBuilder);
 
-echo $response_Peem->getHTTPStatus() . ' ' . $response_Peem->getRawBody();</br>
-echo $response_A->getHTTPStatus() . ' ' . $response_A->getRawBody();</br>
-echo $response_Peem->getHTTPStatus() . ' ' . $response_Peem->getRawBody();</br>
-echo $response_A->getHTTPStatus() . ' ' . $response_A->getRawBody();</br>
+echo $response_Peem->getHTTPStatus() . ' ' . $response_Peem->getRawBody()<br />;<br/>
+echo $response_A->getHTTPStatus() . ' ' . $response_A->getRawBody()<br />;<br/>
+echo $response_Mew->getHTTPStatus() . ' ' . $response_Mew->getRawBody()<br />;<br/>
+echo $response_Mint->getHTTPStatus() . ' ' . $response_Mint->getRawBody()<br />;<br/>
 
 
 
