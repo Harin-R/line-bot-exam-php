@@ -18,7 +18,7 @@ $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('Welco
 $response_Peem = $bot->pushMessage($pushID_Peem, $textMessageBuilder);
 $response_A = $bot->pushMessage($pushID_A, $textMessageBuilder);
 
-echo $response_Peem->getHTTPStatus() . ' ' . $response_Peem->getRawBody();<br>
+echo $response_Peem->getHTTPStatus() . ' ' . $response_Peem->getRawBody();
 echo $response_A->getHTTPStatus() . ' ' . $response_A->getRawBody();
 
 
